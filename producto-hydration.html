@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ZABAS Tactical Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+
+    <section class="producto-detalle">
+        <div class="contenedor-producto">
+            <!-- GALERIA -->
+
+            <div class="galeria">
+
+
+
+                <div class="zoom-container">
+
+                    <img id="imagenPrincipal" src="img/hydration.png" class="imagen-principal">
+
+                </div>
+
+
+                <div class="miniaturas">
+
+                    <img src="img/hydration.png" onclick="cambiarImagen(this)">
+
+                    <img src="img/hydration3.jpg" onclick="cambiarImagen(this)">
+                    <img src="img/hydration4.jpg" onclick="cambiarImagen(this)">
+                    <img src="img/hydration5.jpg" onclick="cambiarImagen(this)">
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- INFORMACIÓN DEL PRODUCTO -->
+
+            <div class="info-producto">
+
+                <h1 class="titulo-producto">Morral Táctico Hydration Assault</h1>
+
+                <p class="precio">$269.900</p>
+
+                <p class="descripcion">
+                    Morral táctico de hidratacion diseñado para operaciones rurales y travel.
+                    Fabricado con materiales resistentes y sistema MOLLE para accesorios adicionales.
+                </p>
+
+                <h3 class="subtitulo">Características</h3>
+
+                <ul class="lista-caracteristicas">
+                    <li>Capacidad 58 litros</li>
+                    <li>Sistema MOLLE modular</li>
+                    <li>Lona de alta tenacidad impermeable</li>
+                    <li>Cremalleras reforzadas</li>
+                    <li>Compartimento para hidratación</li>
+                    <li>Cinturon y Canguro desmontable</li>
+                </ul>
+
+                <button class="boton-comprar" onclick="agregarAlCarrito()">
+                    Agregar al carrito
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+    </section>
+
+    <section class="relacionados">
+
+        <h2>Productos relacionados</h2>
+
+        <div class="grid-relacionados">
+
+            <div class="producto-card">
+                <img src="img/expedition81.png">
+                <h3>Expedition 81L</h3>
+                <a href="producto-expedition.html" class="btn-producto">Ver producto</a>
+            </div>
+
+            <div class="producto-card">
+                <img src="img/recon22.png">
+                <h3>Morral Tactico Recon</h3>
+                <a href="producto.html" class="btn-producto">Ver producto</a>
+            </div>
+
+            <div class="producto-card">
+                <img src="img/quickdraw.png">
+                <h3>QuickDraw CCW Pack</h3>
+                <a href="producto-quickdraw.html" class="btn-producto">Ver producto</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    
+
+
+
+    
+    <script src="js/carrito.js"></script>
+    <script src="./js/loader.js"></script>
+
+</body>
+
+<div id="footer"></div>
+
+</html>

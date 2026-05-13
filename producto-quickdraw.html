@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ZABAS Tactical Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+
+    <section class="producto-detalle">
+        <div class="contenedor-producto">
+            <!-- GALERIA -->
+
+            <div class="galeria">
+
+
+
+                <div class="zoom-container">
+
+                    <img id="imagenPrincipal" src="img/quickdraw.jpg" class="imagen-principal">
+
+                </div>
+
+
+                <div class="miniaturas">
+
+                    <img src="img/quickdraw.jpg" onclick="cambiarImagen(this)">
+                    <img src="img/quickdraw1.jpg" onclick="cambiarImagen(this)">
+                    <img src="img/quickdraw2.jpg" onclick="cambiarImagen(this)">
+                    <img src="img/quickdraw3.jpg" onclick="cambiarImagen(this)">
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- INFORMACIÓN DEL PRODUCTO -->
+
+            <div class="info-producto">
+
+                <h1 class="titulo-producto">Canguro Porta arma-QuickDraw CCW Pack
+                </h1>
+
+                <p class="precio">$89.900</p>
+
+                <p class="descripcion">
+                    Canguro porta arma, ten a la mano tu arma de seguridad en caso de emergencia.
+                </p>
+
+                <h3 class="subtitulo">Características</h3>
+
+                <ul class="lista-caracteristicas">
+                    <li>Capacidad 48 mm</li>
+                    <li>Sistema cinturon y canguro</li>
+                    <li>Lona de alta tenacidad</li>
+                    <li>Cremalleras reforzadas</li>
+                    <li>Compartimento pequeños laterales</li>
+
+                </ul>
+
+                <button class="boton-comprar" onclick="agregarAlCarrito()">
+                    Agregar al carrito
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+    </section>
+
+    <section class="relacionados">
+
+        <h2>Productos relacionados</h2>
+
+        <div class="grid-relacionados">
+
+            <div class="producto-card">
+                <img src="img/expedition81.jpg">
+                <h3>Expedition 81L</h3>
+                <a href="producto-expedition.html" class="btn-producto">Ver producto</a>
+            </div>
+
+            <div class="producto-card">
+                <img src="img/hydration.jpg">
+                <h3>Hydration Assault</h3>
+                <a href="producto-hydration.html" class="btn-producto">Ver producto</a>
+            </div>
+
+            <div class="producto-card">
+                <img src="img/quickdraw.jpg">
+                <h3>QuickDraw CCW Pack</h3>
+                <a href="producto-quickdraw.html" class="btn-producto">Ver producto</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <div id="footer"></div>
+
+
+
+   
+
+
+    
+    <script src="js/carrito.js"></script>
+    <script src="./js/loader.js"></script>
+
+</body>
+
+
+</html>
