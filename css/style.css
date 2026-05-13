@@ -342,7 +342,7 @@ img {
 
     display: none;
 
-    min-height: 100vh;
+    min-height: 70vh;
 
     background-color: #111;
     background-size: cover;
@@ -438,7 +438,7 @@ img {
 
 .slide h1 {
 
-    font-size: 90px;
+    font-size: 72px;
 
     max-width: 700px;
 
@@ -565,41 +565,301 @@ img {
 }
 
 /* ===================================== */
-/* PRODUCTOS HOME */
+/* PRODUCTOS HOME PREMIUM */
 /* ===================================== */
 
-.productos {
-    background: white;
-    color: black;
-    padding: 60px 20px;
-    text-align: center;
+.productos{
+
+    background:#0b0b0b;
+
+    color:white;
+
+    padding:90px 40px;
+
+    text-align:center;
+
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
 }
 
-.producto {
-    border: 1px solid #eee;
-    background: #fff;
-    padding: 20px;
-    border-radius: 6px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.producto{
+
+    position:relative;
+
+    background:
+    linear-gradient(
+    180deg,
+    #111 0%,
+    #090909 100%
+    );
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:0.45s ease;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:350px;
+
 }
 
-.producto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.producto:hover{
+
+    transform:
+    translateY(-12px);
+
+    border-color:
+    rgba(255,0,0,0.3);
+
+    box-shadow:
+
+    0 0 30px rgba(255,0,0,0.08),
+
+    0 20px 50px rgba(0,0,0,0.65);
+
 }
 
-.producto img {
-    width: 80%;
-    margin: auto;
+.producto img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:contain;
+
+    transition:0.5s ease;
+
+    filter:
+    drop-shadow(
+    0 15px 30px rgba(0,0,0,0.7)
+    );
+
 }
 
+.producto:hover img{
+
+    transform:
+    scale(1.07);
+
+}
+
+.producto h3{
+
+    color:white;
+
+    font-size:25px;
+
+    margin-top:20px;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+}
+
+.producto p{
+
+    color:#ff1e1e;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    margin:0;
+
+    text-align:left;
+
+}
+.producto-footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    width:100%;
+
+    margin-top:auto;
+
+}
+
+.producto .btn-producto{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:60px;
+
+    height:60px;
+
+    margin-top:auto;
+
+    margin-left:auto;
+
+    background:#121212;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:14px;
+
+    transition:0.3s ease;
+
+}
+
+.producto .btn-producto:hover{
+
+    background:#c40000;
+
+    border-color:#c40000;
+
+    transform:scale(1.08);
+
+}
+
+.ver-todos{
+
+    margin-top:50px;
+
+}
+
+.btn-ver-todos{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    padding:16px 28px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:14px;
+
+    background:#111;
+
+    transition:0.3s ease;
+
+}
+
+.btn-ver-todos:hover{
+
+    background:#c40000;
+
+    border-color:#c40000;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+/* ===================================== */
+/* BENEFICIOS PREMIUM */
+/* ===================================== */
+
+.beneficios{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+    gap:60px;
+
+    padding:70px 60px;
+
+    background:#070707;
+
+}
+
+.beneficio{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+}
+
+.beneficio img{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+    margin-top:4px;
+
+}
+
+.beneficio h3{
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+    letter-spacing:1px;
+
+}
+
+.beneficio p{
+
+    color:#8d8d8d;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    max-width:240px;
+
+}
 /* ===================================== */
 /* PRODUCTO DETALLE */
 /* ===================================== */
