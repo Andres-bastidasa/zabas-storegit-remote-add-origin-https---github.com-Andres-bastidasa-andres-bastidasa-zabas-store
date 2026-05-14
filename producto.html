@@ -19,25 +19,11 @@
 
             <div class="galeria">
 
-
+                <div class="miniaturas" id="miniaturas"></div>
 
                 <div class="zoom-container">
-
-                    <img id="imagenPrincipal" src="img/recon1.png" class="imagen-principal">
-
+                    <img id="imagenPrincipal" class="img-principal">
                 </div>
-
-
-                <div class="miniaturas">
-
-                    <img src="img/recon1.png" onclick="cambiarImagen(this)">
-                    <img src="img/recon2.png" onclick="cambiarImagen(this)">
-                    <img src="img/recon3.png" onclick="cambiarImagen(this)">
-
-
-
-                </div>
-
 
             </div>
 
@@ -46,65 +32,133 @@
 
             <div class="info-producto">
 
-                <h1 class="titulo-producto">Morral Táctico Recon 22L</h1>
+                <h1 class="titulo-producto" id="nombreProducto"></h1>
 
-                <p class="precio">$189.900</p>
+                <p class="precio" id="precioProducto"></p>
 
-                <p class="descripcion">
-                    Morral táctico compacto diseñado para operaciones urbanas y actividades outdoor.
-                    Fabricado con materiales resistentes y sistema MOLLE para accesorios adicionales.
-                </p>
+                <p class="descripcion" id="descripcionProducto"></p>
 
                 <h3 class="subtitulo">Características</h3>
 
-                <ul class="lista-caracteristicas">
-                    <li>Capacidad 22 litros</li>
-                    <li>Sistema MOLLE modular</li>
-                    <li>Material impermeable</li>
-                    <li>Cremalleras reforzadas</li>
-                    <li>Compartimento para hidratación</li>
-                </ul>
+                <ul class="lista-caracteristicas" id="listaCaracteristicas"></ul>
 
-                <button class="boton-comprar" onclick="agregarAlCarrito()">
-                    Agregar al carrito
-                </button>
+                <div class="acciones-producto">
+
+                    <div class="cantidad-selector">
+
+                        <button id="menosCantidad">-</button>
+
+                        <span id="cantidadProducto">1</span>
+
+                        <button id="masCantidad">+</button>
+
+                    </div>
+
+                   <button class="boton-comprar" onclick="agregarAlCarrito()">
+
+                        🛒 AGREGAR AL CARRITO
+
+                    </button>
+
+
+                </div>
+
+                <div class="beneficios-producto">
+
+                    <div>
+
+                        <img src="img/envio.png">
+
+                        <span>Envíos a todo Colombia</span>
+
+                    </div>
+
+                    <div>
+
+                        <img src="img/compra.png">
+
+                        <span>Pagos 100% seguros</span>
+
+                    </div>
+
+                    <div>
+
+                        <img src="img/escudo.png">
+
+                        <span>Garantía de calidad</span>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
         </div>
     </section>
-    </section>
 
-    <section class="relacionados">
 
-        <h2>Productos relacionados</h2>
+    <div class="grid-relacionados">
 
-        <div class="grid-relacionados">
+        <div class="producto-card">
 
-            <div class="producto-card">
-                <img src="img/expedition81.png">
-                <h3>Expedition 81L</h3>
-                <a href="producto-expedition.html" class="btn-producto">Ver producto</a>
-            </div>
+            <img src="img/expedition81.png">
 
-            <div class="producto-card">
-                <img src="img/hydration.png">
-                <h3>Hydration Assault</h3>
-                <a href="producto-hydration.html" class="btn-producto">Ver producto</a>
-            </div>
+            <h3>Expedition 81L Pack</h3>
 
-            <div class="producto-card">
-                <img src="img/quickdraw.png">
-                <h3>QuickDraw CCW Pack</h3>
-                <a href="producto-quickdraw.html" class="btn-producto">Ver producto</a>
+            <div class="producto-footer">
+
+                <p>$329.900</p>
+
+                <a href="producto.html?id=expedition" class="btn-producto">
+                    🛒
+                </a>
+
             </div>
 
         </div>
 
-    </section>
+        <div class="producto-card">
+
+            <img src="img/hydration.png">
+
+            <h3>Hydration Assault Pack</h3>
+
+            <div class="producto-footer">
+
+                <p>$269.900</p>
+
+                <a href="producto.html?id=hydration" class="btn-producto">
+                    🛒
+                </a>
+
+            </div>
+
+        </div>
 
 
 
+        <div class="producto-card">
+
+            <img src="img/quickdraw.png">
+
+            <h3>QuickDraw CCW Pack</h3>
+
+            <div class="producto-footer">
+
+                <p>$89.900</p>
+
+                <a href="producto.html?id=quickdraw" class="btn-producto">
+                    🛒
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
 
 
 
@@ -112,10 +166,144 @@
     <div id="footer"></div>
 
 
+<script src="js/carrito.js"></script>
+<script src="./js/loader.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/cantidad.js"></script>
 
+<script>
+
+window.onload = () => {
+
+/* ===================================== */
+/* PRODUCTO DINÁMICO */
+/* ===================================== */
+
+const params =
+new URLSearchParams(window.location.search);
+
+const id =
+params.get("id");
+
+const producto =
+productos[id];
+
+/* ELEMENTOS */
+
+const nombreProducto =
+document.getElementById("nombreProducto");
+
+const precioProducto =
+document.getElementById("precioProducto");
+
+const descripcionProducto =
+document.getElementById("descripcionProducto");
+
+const imagenPrincipal =
+document.getElementById("imagenPrincipal");
+
+const miniaturas =
+document.getElementById("miniaturas");
+
+const listaCaracteristicas =
+document.getElementById("listaCaracteristicas");
+
+/* CONTENIDO */
+
+nombreProducto.textContent =
+producto.nombre;
+
+precioProducto.textContent =
+producto.precio;
+
+descripcionProducto.textContent =
+producto.descripcion;
+
+imagenPrincipal.src =
+producto.imagenPrincipal;
+
+/* MINIATURAS */
+
+miniaturas.innerHTML = "";
+
+producto.miniaturas.forEach(imagen => {
+
+    const img =
+    document.createElement("img");
+
+    img.src = imagen;
+
+    img.onclick = () => {
+
+        imagenPrincipal.src = imagen;
+
+    };
+
+    miniaturas.appendChild(img);
+
+});
+
+/* CARACTERÍSTICAS */
+
+listaCaracteristicas.innerHTML = "";
+
+producto.caracteristicas.forEach(caracteristica => {
+
+    const li =
+    document.createElement("li");
+
+    li.textContent = caracteristica;
+
+    listaCaracteristicas.appendChild(li);
+
+});
+
+/* ===================================== */
+/* ZOOM */
+/* ===================================== */
+
+const zoomContainer =
+document.querySelector(".zoom-container");
+
+zoomContainer.addEventListener("mousemove", (e) => {
+
+    const rect =
+    zoomContainer.getBoundingClientRect();
+
+    const x =
+    ((e.clientX - rect.left) / rect.width) * 100;
+
+    const y =
+    ((e.clientY - rect.top) / rect.height) * 100;
+
+    imagenPrincipal.style.transformOrigin =
+    `${x}% ${y}%`;
+
+});
+
+zoomContainer.addEventListener("mouseenter", () => {
+
+    imagenPrincipal.style.transform =
+    "scale(1.8)";
+
+});
+
+zoomContainer.addEventListener("mouseleave", () => {
+
+    imagenPrincipal.style.transform =
+    "scale(1)";
+
+    imagenPrincipal.style.transformOrigin =
+    "center center";
+
+});
+
+};
+
+</script>
     
-    <script src="js/carrito.js"></script>
-    <script src="./js/loader.js"></script>
+
+
 
 </body>
 

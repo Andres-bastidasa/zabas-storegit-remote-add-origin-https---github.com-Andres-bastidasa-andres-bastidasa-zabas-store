@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Productos | ZABAS</title>
+
+    <link rel="stylesheet"
+    href="css/style.css">
+
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<section class="hero-catalogo">
+
+    <div class="overlay-catalogo"></div>
+
+    <div class="contenido-catalogo">
+
+        <p class="breadcrumb">
+            INICIO > PRODUCTOS
+        </p>
+
+        <h1>NUESTROS PRODUCTOS</h1>
+
+        <p class="texto-catalogo">
+
+            Equipamiento táctico premium
+            diseñado para rendimiento extremo.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="catalogo-premium">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar-catalogo">
+
+        <h3>CATEGORÍAS</h3>
+
+        <ul>
+
+            <li>Morrales Tácticos</li>
+            <li>Canguros</li>
+            <li>Camping</li>
+            <li>Accesorios</li>
+            <li>Hidratación</li>
+
+        </ul>
+
+        <button class="btn-filtro">
+
+            LIMPIAR FILTROS
+
+        </button>
+
+    </aside>
+
+    <!-- PRODUCTOS -->
+
+    <div class="contenido-productos">
+
+        <div class="top-catalogo">
+
+            <p>
+                48 PRODUCTOS
+            </p>
+
+            <select>
+
+                <option>
+                    Más recientes
+                </option>
+
+                <option>
+                    Precio menor
+                </option>
+
+                <option>
+                    Precio mayor
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="grid-productos"
+        id="gridProductos"></div>
+
+    </div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="./js/loader.js"></script>
+<script src="./js/productos.js"></script>
+
+<script>
+
+const grid =
+document.getElementById("gridProductos");
+
+for(const id in productos){
+
+    const producto =
+    productos[id];
+
+    grid.innerHTML += `
+
+   <div class="card-catalogo">
+        <img src="${producto.imagenPrincipal}">
+
+        <h3>${producto.nombre}</h3>
+
+        <div class="producto-footer">
+
+            <p>${producto.precio}</p>
+
+            <a href="
+            producto.html?id=${id}
+            "
+            class="btn-producto">
+
+            🛒
+
+            </a>
+
+        </div>
+
+    </div>
+
+    `;
+
+}
+
+</script>
+
+</body>
+
+</html>
