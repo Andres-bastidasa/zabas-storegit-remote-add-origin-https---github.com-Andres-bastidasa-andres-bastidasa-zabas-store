@@ -6,6 +6,10 @@ const productos = {
 
         precio: "$189.900",
 
+        categoria: [
+            "Morrales",
+        ],
+
         imagenPrincipal: "img/recon1.png",
 
         miniaturas: [
@@ -36,6 +40,10 @@ const productos = {
         nombre: "HYDRATION ASSAULT PACK",
 
         precio: "$269.900",
+
+        categoria: [
+            "Morrales"
+        ],
 
         imagenPrincipal: "img/hydration.png",
 
@@ -68,6 +76,10 @@ const productos = {
 
         precio: "$89.900",
 
+        categoria: [
+            "Canguros"
+        ],
+
         imagenPrincipal: "img/quickdraw.png",
 
         miniaturas: [
@@ -98,6 +110,11 @@ const productos = {
         nombre: "EXPEDITION 81L",
 
         precio: "$329.900",
+
+        categoria: [
+            "Morrales",
+            "Camping"
+        ],
 
         imagenPrincipal: "img/expedition81.png",
 
@@ -133,7 +150,10 @@ const productos = {
 
         precio: "$369.900",
 
-        categoria: "Morrales",
+        categoria: [
+            "Morrales",
+            "Camping"
+        ],
 
         imagenPrincipal: "img/blackhack1.png",
 
@@ -165,7 +185,9 @@ const productos = {
 
         precio: "$119.000",
 
-        categoria: "Canguros",
+        categoria: [
+            "Canguros"
+        ],
 
         imagenPrincipal: "img/canguro1.png",
 
@@ -199,7 +221,9 @@ const productos = {
 
         precio: "$79.900",
 
-        categoria: "Canguros",
+        categoria: [
+            "Canguros"
+        ],
 
         imagenPrincipal: "img/piernero1.png",
 
@@ -232,7 +256,11 @@ const productos = {
 
         precio: "$349.000",
 
-        categoria: "Porta Equipos",
+        categoria: [
+            "Morrales",
+            "Porta Equipos"
+
+        ],
 
         imagenPrincipal: "img/portafusil1.png",
 
@@ -265,7 +293,10 @@ const productos = {
 
         precio: "$99.000",
 
-        categoria: "Camping",
+        categoria: [
+            "Morrales",
+            "Camping"
+        ],
 
         imagenPrincipal: "img/silla1.png",
 
@@ -298,7 +329,9 @@ const productos = {
 
         precio: "$179.900",
 
-        categoria: "Morrales",
+        categoria: [
+            "Morrales"
+        ],
 
         imagenPrincipal: "img/transformer1.png",
 
@@ -332,7 +365,9 @@ const productos = {
 
         precio: "$119.000",
 
-        categoria: "Porta Equipos",
+        categoria: [
+            "Porta Equipos"
+        ],
 
         imagenPrincipal: "img/vestido.png",
 
@@ -362,7 +397,10 @@ const productos = {
 
         precio: "$79.900",
 
-        categoria: "Accesorios MOLLE",
+        categoria: [
+            "Accesorios MOLLE",
+            "Tactico Profesional"
+        ],
 
         imagenPrincipal: "img/provedordoble.png",
 
@@ -392,7 +430,10 @@ const productos = {
 
         precio: "$59.900",
 
-        categoria: "Accesorios MOLLE",
+        categoria: [
+            "Accesorios MOLLE",
+            "Tactico Profesional"
+        ],
 
         imagenPrincipal: "img/provedorsencillo.png",
 
@@ -422,7 +463,10 @@ const productos = {
 
         precio: "$59.900",
 
-        categoria: "Accesorios MOLLE",
+        categoria: [
+            "Accesorios MOLLE",
+            "Tactico Profesional"
+        ],
 
         imagenPrincipal: "img/portaesposas.png",
 
@@ -452,7 +496,10 @@ const productos = {
 
         precio: "$119.000",
 
-        categoria: "Táctico Profesional",
+        categoria: [
+            "Accesorios MOLLE",
+            "Tactico Profesional"
+        ],
 
         imagenPrincipal: "img/cinturon.png",
 
@@ -482,7 +529,9 @@ const productos = {
 
         precio: "$59.000",
 
-        categoria: "Táctico Profesional",
+        categoria: [
+            "Porta Equipos"
+        ],
 
         imagenPrincipal: "img/sable.png",
 

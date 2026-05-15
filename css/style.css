@@ -1381,110 +1381,425 @@ img {
 }
 
 /* ===================================== */
-/* CONTACTO */
+/* HERO CONTACTO */
 /* ===================================== */
 
-.contacto {
-    max-width: 1200px;
-    margin: auto;
-    padding: 60px 20px;
-}
+.hero-contacto{
 
-.contenedor-contacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1100px;
-    margin: auto;
-}
+    position:relative;
 
-.info-contacto {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 8px;
-    color: #ccc;
-}
+    width:100%;
 
-.info-contacto h3 {
-    margin-bottom: 20px;
-}
+    min-height:70vh;
 
-.info-contacto p {
-    margin-bottom: 10px;
-}
+    background:
 
-.formulario-contacto {
-    display: flex;
-    flex-direction: column;
-}
+    linear-gradient(
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.88)
+    ),
 
-.formulario-contacto input,
-.formulario-contacto textarea {
+    url("../img/equipo.png");
 
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:120px 8%;
+
+    overflow:hidden;
 
 }
 
-.formulario-contacto button {
-    background: #b30000;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+.overlay-contacto{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.8)
+    );
+
 }
 
-.formulario-contacto button:hover {
-    background: #800000;
+.contenido-contacto{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:800px;
+
 }
 
-.mapa {
-    margin-top: 60px;
+.mini-contacto{
+
+    color:#c40000;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+
+    text-transform:uppercase;
+
 }
 
-.redes-contacto {
-    margin-top: 40px;
-    padding-left: 20px;
+.hero-contacto h1{
+
+    font-size:95px;
+
+    line-height:0.9;
+
+    text-transform:uppercase;
+
+    margin-bottom:30px;
+
+    font-weight:900;
+
 }
 
-.iconos-redes {
-    display: flex;
-    gap: 20px;
-    margin-top: 15px;
+.hero-contacto p{
+
+    color:#d0d0d0;
+
+    font-size:21px;
+
+    line-height:1.7;
+
+    max-width:650px;
+
 }
 
-.iconos-redes a {
-    background: #1a1a1a;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+/* ===================================== */
+/* CONTACTO GRID */
+/* ===================================== */
+
+.contacto-zabas{
+
+    padding:100px 8%;
+
+    background:#050505;
+
 }
 
-.iconos-redes a:hover {
-    background: #b30000;
+.contacto-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:start;
+
 }
 
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+/* ===================================== */
+/* INFO */
+/* ===================================== */
+
+.info-contacto{
+
+    background:#0c0c0c;
+
+    border-radius:28px;
+
+    padding:55px;
+
+    border:1px solid
+    rgba(255,255,255,0.05);
+
 }
 
-.whatsapp-float:hover {
-    background: #1ebe5d;
+.info-contacto h2{
+
+    font-size:68px;
+
+    line-height:1;
+
+    margin-bottom:30px;
+
+}
+
+.texto-info{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+    font-size:18px;
+
+}
+
+.item-contacto{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+    color:#d0d0d0;
+
+    font-size:18px;
+
+}
+
+.item-contacto span{
+
+    width:55px;
+
+    height:55px;
+
+    background:#111;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    border:1px solid
+    rgba(255,255,255,0.05);
+
+}
+
+.redes-contacto{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+.redes-contacto a{
+
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid
+    rgba(255,255,255,0.08);
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    transition:0.3s ease;
+
+}
+
+.redes-contacto a:hover{
+
+    background:#c40000;
+
+    border-color:#c40000;
+
+}
+
+/* ===================================== */
+/* FORMULARIO */
+/* ===================================== */
+
+.formulario-contacto{
+
+    background:#0c0c0c;
+
+    border-radius:28px;
+
+    padding:55px;
+
+    border:1px solid
+    rgba(255,255,255,0.05);
+
+}
+
+.formulario-contacto h3{
+
+    font-size:42px;
+
+    margin-bottom:35px;
+
+}
+
+.formulario-contacto form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.formulario-contacto input{
+
+    width:100%;
+
+    height:65px;
+
+    background:#111;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:0 22px;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.formulario-contacto textarea{
+
+    width:100%;
+
+    height:220px;
+
+    background:#111;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:22px;
+
+    color:white;
+
+    font-size:16px;
+
+    resize:none;
+
+    outline:none;
+
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus{
+
+    border:1px solid #c40000;
+
+}
+
+.formulario-contacto button{
+
+    width:100%;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#c40000;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+}
+
+.formulario-contacto button:hover{
+
+    background:#ff0000;
+
+    transform:translateY(-4px);
+
+}
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+@media(max-width:1100px){
+
+    .contacto-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-contacto{
+
+        min-height:60vh;
+
+        padding:120px 6%;
+
+    }
+
+    .hero-contacto h1{
+
+        font-size:58px;
+
+    }
+
+    .hero-contacto p{
+
+        font-size:18px;
+
+    }
+
+    .info-contacto h2{
+
+        font-size:48px;
+
+    }
+
+    .formulario-contacto h3{
+
+        font-size:32px;
+
+    }
+
+    .info-contacto,
+    .formulario-contacto{
+
+        padding:35px;
+
+    }
+
+    .redes-contacto{
+
+        flex-wrap:wrap;
+
+    }
+
 }
 
 /* ===================================== */
@@ -1605,8 +1920,218 @@ img {
 
 @media (max-width:768px) {
 
+
+    /* ===================================== */
+/* HEADER MOBILE FIX */
+/* ===================================== */
+
+/* ===================================== */
+/* HEADER MOBILE FIX */
+/* ===================================== */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    width:100%;
+
+    padding:15px 20px;
+
+}
+
+.logo-area{
+
+    min-width:auto;
+
+}
+
+.logo{
+
+    width:110px;
+
+}
+
+/* OCULTAR BUSCADOR */
+
+.buscador{
+
+    display:none;
+
+}
+
+/* MENU MOBILE */
+
+.menu{
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#050505;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:flex-start;
+
+    padding:120px 35px;
+
+    gap:30px;
+
+    transition:0.4s ease;
+
+    z-index:999;
+
+}
+
+.menu.active{
+
+    right:0;
+
+}
+
+/* HAMBURGUESA */
+
+.hamburguesa{
+
+    display:flex;
+
+}
+
+/* ===================================== */
+/* FOOTER MOBILE FIX */
+/* ===================================== */
+
+.footer-top{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    padding:60px 25px;
+
+}
+
+.footer-brand img{
+
+    width:220px;
+
+}
+
+/* EVITAR SCROLL HORIZONTAL */
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+.logo-area{
+
+    min-width:auto;
+
+}
+
+.logo{
+
+    width:110px;
+
+}
+
+/* OCULTAR BUSCADOR */
+
+.buscador{
+
+    display:none;
+
+}
+
+/* MENU MOBILE */
+
+.menu{
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#050505;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:flex-start;
+
+    padding:120px 35px;
+
+    gap:30px;
+
+    transition:0.4s ease;
+
+    z-index:999;
+
+}
+
+.menu.active{
+
+    right:0;
+
+}
+
+/* HAMBURGUESA */
+
+.hamburguesa{
+
+    display:flex;
+
+}
+
+/* ===================================== */
+/* FOOTER MOBILE FIX */
+/* ===================================== */
+
+.footer-top{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    padding:60px 25px;
+
+}
+
+.footer-brand img{
+
+    width:220px;
+
+}
+
+/* EVITAR SCROLL HORIZONTAL */
+
+body{
+
+    overflow-x:hidden;
+
+}
     .header {
-        flex-direction: column;
+        
         align-items: center;
         gap: 15px;
     }
@@ -1615,24 +2140,9 @@ img {
         display: block;
     }
 
-    .menu {
+    
 
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 30px;
-
-        flex: 1;
-
-    }
-
-    .menu.activo {
-        display: flex;
-    }
-
+    
     .menu a {
         padding: 10px 0;
         border-bottom: 1px solid #333;
@@ -2047,5 +2557,1294 @@ img {
     font-weight:700;
 
     line-height:1.2;
+
+}
+/* ===================================== */
+/* BUSCADOR CATÁLOGO */
+/* ===================================== */
+
+.input-buscador{
+
+    width:100%;
+
+    height:58px;
+
+    background:#111;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:0 20px;
+
+    color:white;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+.input-buscador::placeholder{
+
+    color:#666;
+
+
+}
+
+
+    /* ===================================== */
+/* HERO NOSOTROS */
+/* ===================================== */
+
+.hero-nosotros{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:85vh;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.85)
+    ),
+
+    url("../img/nevado.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:80px 8%;
+
+    overflow:hidden;
+
+}
+
+.overlay-nosotros{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.7)
+    );
+
+}
+
+.bandera-linea{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:#c40000;
+
+    box-shadow:
+    0 0 25px rgba(196,0,0,0.7);
+
+}
+
+.contenido-nosotros{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+}
+
+.mini-texto{
+
+    color:#c40000;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+
+    text-transform:uppercase;
+
+}
+
+.hero-nosotros h1{
+
+    font-size:92px;
+
+    line-height:0.9;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    margin-bottom:35px;
+
+    color:white;
+
+}
+
+.texto-nosotros{
+
+    max-width:700px;
+
+    font-size:22px;
+
+    line-height:1.7;
+
+    color:#d0d0d0;
+
+    margin-bottom:40px;
+
+}
+
+.btn-nosotros{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:260px;
+
+    height:65px;
+
+    background:#c40000;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:16px;
+
+    font-weight:700;
+
+    transition:0.3s ease;
+
+}
+
+.btn-nosotros:hover{
+
+    background:#ff0000;
+
+    transform:translateY(-5px);
+
+}
+
+/* ===================================== */
+/* HISTORIA */
+/* ===================================== */
+
+.historia-zabas{
+
+    padding:90px 8%;
+
+    background:#050505;
+
+}
+
+.historia-grid{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 0.8fr;
+
+    gap:60px;
+
+    align-items:start;
+
+}
+
+.subtitulo-seccion{
+
+    color:#c40000;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+
+}
+
+.historia-texto h2{
+
+    font-size:72px;
+
+    line-height:1;
+
+    text-transform:uppercase;
+
+    margin-bottom:40px;
+
+}
+
+.historia-texto p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+}
+
+.historia-card{
+
+    background:#0d0d0d;
+
+    border-radius:28px;
+
+    padding:50px;
+
+    border:1px solid
+    rgba(255,255,255,0.05);
+
+}
+
+.historia-card h3{
+
+    color:#c40000;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+.historia-card p{
+
+    color:#bcbcbc;
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+
+}
+
+/* ===================================== */
+/* VALORES */
+/* ===================================== */
+
+.valores-zabas{
+
+    padding:90px 8%;
+
+    background:#080808;
+
+    text-align:center;
+
+}
+
+.valores-zabas h2{
+
+    font-size:72px;
+
+    margin-bottom:70px;
+
+    text-transform:uppercase;
+
+}
+
+.grid-valores{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.valor-box{
+
+    background:#101010;
+
+    border-radius:24px;
+
+    padding:50px 35px;
+
+    border:1px solid
+    rgba(255,255,255,0.05);
+
+    transition:0.4s ease;
+
+}
+
+.valor-box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#c40000;
+
+}
+
+.valor-box h3{
+
+    color:#c40000;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.valor-box p{
+
+    color:#bdbdbd;
+
+    line-height:1.7;
+
+}
+
+/* ===================================== */
+/* CTA */
+/* ===================================== */
+
+.cta-nosotros{
+
+    padding:100px 8%;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.9)
+    ),
+
+    url("../img/equipo.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.cta-nosotros h2{
+
+    font-size:90px;
+
+    line-height:1;
+
+    text-transform:uppercase;
+
+    margin-bottom:45px;
+
+}
+
+.btn-cta-nosotros{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:280px;
+
+    height:65px;
+
+    background:#c40000;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:16px;
+
+    font-weight:700;
+
+    transition:0.3s ease;
+
+}
+
+.btn-cta-nosotros:hover{
+
+    background:#ff0000;
+
+    transform:translateY(-5px);
+
+}
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+@media(max-width:1100px){
+
+    .hero-nosotros h1{
+
+        font-size:80px;
+
+    }
+
+    .historia-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .grid-valores{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-nosotros{
+
+        padding:120px 6%;
+
+    }
+
+    .hero-nosotros h1{
+
+        font-size:56px;
+
+    }
+
+    .texto-nosotros{
+
+        font-size:18px;
+
+    }
+
+    .historia-texto h2{
+
+        font-size:48px;
+
+    }
+
+    .valores-zabas h2{
+
+        font-size:50px;
+
+    }
+
+    .grid-valores{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .cta-nosotros h2{
+
+        font-size:55px;
+
+    }
+
+
+   }
+   /* ===================================== */
+/* EXPERIENCIA */
+/* ===================================== */
+
+.experiencia-zabas{
+
+    padding:90px 8%;
+
+    background:#050505;
+
+}
+
+.experiencia-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+    align-items:stretch;
+
+}
+
+.exp-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    min-height:450px;
+
+    background:#111;
+
+}
+
+.exp-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:0.5s ease;
+
+}
+
+.exp-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.exp-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:40px;
+
+    background:
+
+    linear-gradient(
+    transparent,
+    rgba(0,0,0,0.92)
+    );
+
+}
+
+.exp-overlay h3{
+
+    font-size:42px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.exp-overlay p{
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+
+    max-width:500px;
+
+}
+/* ===================================== */
+/* MAPA */
+/* ===================================== */
+
+.mapa-zabas{
+
+    padding:0 8% 100px;
+
+    background:#050505;
+
+}
+
+.mapa-contenedor{
+
+    width:100%;
+
+    height:500px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid
+    rgba(255,255,255,0.05);
+
+    box-shadow:
+    0 0 40px rgba(0,0,0,0.4);
+
+}
+
+.mapa-contenedor iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+
+    filter:
+    grayscale(1)
+    invert(0.92)
+    contrast(1.2);
+
+}
+
+/* ===================================== */
+/* RESPONSIVE GLOBAL */
+/* ===================================== */
+
+@media(max-width:992px){
+
+    /* HERO */
+
+    .hero{
+
+        padding:140px 6% 80px;
+
+        min-height:auto;
+
+        text-align:center;
+
+    }
+
+    .hero h1{
+
+        font-size:68px;
+
+        line-height:0.95;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+        max-width:100%;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    /* GRID PRODUCTOS */
+
+    .grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    /* BENEFICIOS */
+
+    .beneficios-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+/* ===================================== */
+/* MOBILE */
+/* ===================================== */
+
+@media(max-width:768px){
+
+    /* NAVBAR */
+
+    /* HEADER MOBILE */
+
+.header{
+
+    padding:18px 5%;
+
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    width:120px;
+
+}
+
+/* BUSCADOR */
+
+.buscador{
+
+    display:none;
+
+}
+
+/* CARRITO */
+
+.carrito-icono{
+
+    margin-right:15px;
+
+}
+
+/* HAMBURGUESA */
+
+.hamburguesa{
+
+    display:flex;
+
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:70vh;
+
+    padding:120px 5% 60px;
+
+}
+
+.hero-slide{
+
+    min-height:70vh;
+
+    border-radius:24px;
+
+    padding:40px 25px;
+
+}
+
+.hero-slide h1{
+
+    font-size:52px;
+
+    line-height:0.95;
+
+}
+
+.hero-slide p{
+
+    font-size:16px;
+
+    max-width:100%;
+
+}
+
+/* HEADER MOBILE */
+
+.header{
+
+    padding:18px 5%;
+
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    width:120px;
+
+}
+
+/* BUSCADOR */
+
+.buscador{
+
+    display:none;
+
+}
+
+/* CARRITO */
+
+.carrito-icono{
+
+    margin-right:15px;
+
+}
+
+/* HAMBURGUESA */
+
+.hamburguesa{
+
+    display:flex;
+
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:70vh;
+
+    padding:120px 5% 60px;
+
+}
+
+.hero-slide{
+
+    min-height:70vh;
+
+    border-radius:24px;
+
+    padding:40px 25px;
+
+}
+
+.hero-slide h1{
+
+    font-size:52px;
+
+    line-height:0.95;
+
+}
+
+.hero-slide p{
+
+    font-size:16px;
+
+    max-width:100%;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+/* BOTONES */
+
+.btn-principal,
+.btn-secundario{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+/* BOTONES */
+
+.btn-principal,
+.btn-secundario{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+    .menu{
+
+    position:fixed;
+
+    top:0;
+
+    right:-100%;
+
+    width:280px;
+
+    height:100vh;
+
+    background:#050505;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:flex-start;
+
+    padding:120px 40px;
+
+    gap:30px;
+
+    transition:0.4s ease;
+
+    z-index:999;
+
+}
+
+.menu.active{
+
+    right:0;
+
+}
+
+.hamburguesa{
+
+    display:flex;
+
+}
+    .navbar{
+
+        padding:18px 6%;
+
+    }
+
+    .menu{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:280px;
+
+        height:100vh;
+
+        background:#050505;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:120px 40px;
+
+        transition:0.4s ease;
+
+        z-index:999;
+
+    }
+
+    .menu.active{
+
+        right:0;
+
+    }
+
+    .hamburguesa{
+
+        display:flex;
+
+    }
+
+    /* HERO */
+
+    .hero{
+
+        padding-top:140px;
+
+    }
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    /* PRODUCTOS */
+
+    .productos{
+
+        padding:80px 6%;
+
+    }
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .producto{
+
+        padding:20px;
+
+    }
+
+    /* BENEFICIOS */
+
+    .beneficios{
+
+        padding:80px 6%;
+
+    }
+
+    .beneficios-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    /* TITULOS */
+
+    h2{
+
+        font-size:42px !important;
+
+    }
+
+}
+/* ===================================== */
+/* HAMBURGUESA */
+/* ===================================== */
+
+.hamburguesa{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+    cursor:pointer;
+
+    z-index:2000;
+
+}
+
+.hamburguesa span{
+
+    display:block;
+
+    width:28px;
+
+    height:3px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+}
+
+/* ===================================== */
+/* RESPONSIVE PRODUCTOS */
+/* ===================================== */
+
+@media(max-width:992px){
+
+    /* CATALOGO */
+
+    .catalogo-premium{
+
+        grid-template-columns:1fr;
+
+        padding:40px 20px;
+
+    }
+
+    .sidebar-catalogo{
+
+        width:100%;
+
+    }
+
+    .grid-productos{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    /* PRODUCTO DETALLE */
+
+    .contenedor-producto{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .galeria{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .miniaturas{
+
+        flex-direction:row;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .zoom-container{
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+    .img-principal{
+
+        max-height:500px;
+
+    }
+
+    .titulo-producto{
+
+        font-size:48px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    /* HERO CATALOGO */
+
+    .hero-catalogo{
+
+        height:auto;
+
+        padding:140px 20px 60px;
+
+    }
+
+    .hero-catalogo h1{
+
+        font-size:48px;
+
+    }
+
+    .texto-catalogo{
+
+        font-size:16px;
+
+    }
+
+    /* GRID PRODUCTOS */
+
+    .grid-productos{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .top-catalogo{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    /* PRODUCTO */
+
+    .producto-detalle{
+
+        padding:120px 20px 60px;
+
+    }
+
+    .titulo-producto{
+
+        font-size:34px;
+
+        line-height:1.1;
+
+    }
+
+    .precio{
+
+        font-size:32px;
+
+    }
+
+    .acciones-producto{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .cantidad-selector{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .boton-comprar{
+
+        width:100%;
+
+    }
+
+    .beneficios-producto{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .relacionados{
+
+        padding:70px 20px;
+
+    }
 
 }

@@ -5,148 +5,260 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Productos | ZABAS</title>
 
-    <link rel="stylesheet"
-    href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<div id="navbar"></div>
+    <div id="navbar"></div>
 
-<section class="hero-catalogo">
+    <section class="hero-catalogo">
 
-    <div class="overlay-catalogo"></div>
+        <div class="overlay-catalogo"></div>
 
-    <div class="contenido-catalogo">
+        <div class="contenido-catalogo">
 
-        <p class="breadcrumb">
-            INICIO > PRODUCTOS
-        </p>
-
-        <h1>NUESTROS PRODUCTOS</h1>
-
-        <p class="texto-catalogo">
-
-            Equipamiento táctico premium
-            diseñado para rendimiento extremo.
-
-        </p>
-
-    </div>
-
-</section>
-
-<section class="catalogo-premium">
-
-    <!-- SIDEBAR -->
-
-    <aside class="sidebar-catalogo">
-
-        <h3>CATEGORÍAS</h3>
-
-        <ul>
-
-            <li>Morrales Tácticos</li>
-            <li>Canguros</li>
-            <li>Camping</li>
-            <li>Accesorios</li>
-            <li>Hidratación</li>
-
-        </ul>
-
-        <button class="btn-filtro">
-
-            LIMPIAR FILTROS
-
-        </button>
-
-    </aside>
-
-    <!-- PRODUCTOS -->
-
-    <div class="contenido-productos">
-
-        <div class="top-catalogo">
-
-            <p>
-                48 PRODUCTOS
+            <p class="breadcrumb">
+                INICIO > PRODUCTOS
             </p>
 
-            <select>
+            <h1>NUESTROS PRODUCTOS</h1>
 
-                <option>
-                    Más recientes
-                </option>
+            <p class="texto-catalogo">
 
-                <option>
-                    Precio menor
-                </option>
+                Equipamiento táctico premium
+                diseñado para rendimiento extremo.
 
-                <option>
-                    Precio mayor
-                </option>
-
-            </select>
+            </p>
 
         </div>
 
-        <div class="grid-productos"
-        id="gridProductos"></div>
+    </section>
 
-    </div>
+    <section class="catalogo-premium">
 
-</section>
+        <!-- SIDEBAR -->
 
-<div id="footer"></div>
+        <aside class="sidebar-catalogo">
 
-<script src="./js/loader.js"></script>
-<script src="./js/productos.js"></script>
+            <h3>CATEGORÍAS</h3>
 
-<script>
+            <ul>
 
-const grid =
+                <li onclick="filtrarCategoria('Todos')">
+                    Todos
+                </li>
+
+                <li onclick="filtrarCategoria('Morrales')">
+                    Morrales
+                </li>
+
+                <li onclick="filtrarCategoria('Canguros')">
+                    Canguros
+                </li>
+
+                <li onclick="filtrarCategoria('Camping')">
+                    Camping
+                </li>
+
+                <li onclick="filtrarCategoria('Porta Equipos')">
+                    Porta Equipos
+                </li>
+
+                <li onclick="filtrarCategoria('Accesorios MOLLE')">
+                    Accesorios MOLLE
+                </li>
+
+                <li onclick="filtrarCategoria('Tactico Profesional')">
+                    Táctico Profesional
+                </li>
+
+            </ul>
+
+            <button class="btn-filtro">
+
+                LIMPIAR FILTROS
+
+            </button>
+
+        </aside>
+
+        <!-- PRODUCTOS -->
+
+        <div class="contenido-productos">
+
+            <div class="top-catalogo">
+                <input type="text" id="buscadorProductos" placeholder="Buscar producto..." class="input-buscador">
+
+                <p>
+                    16 PRODUCTOS
+                </p>
+
+                <select>
+
+                    <option>
+                        Más recientes
+                    </option>
+
+                    <option>
+                        Precio menor
+                    </option>
+
+                    <option>
+                        Precio mayor
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="grid-productos" id="gridProductos"></div>
+
+        </div>
+
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="./js/loader.js"></script>
+    <script src="./js/productos.js"></script>
+
+    <script>
+
+        const grid =
 document.getElementById("gridProductos");
 
-for(const id in productos){
+const inputBuscador =
+document.getElementById(
+"buscadorProductos"
+);
 
-    const producto =
-    productos[id];
+const params =
+new URLSearchParams(
+window.location.search
+);
 
-    grid.innerHTML += `
+const busquedaURL =
+params.get("buscar") || "";
 
-   <div class="card-catalogo">
-        <img src="${producto.imagenPrincipal}">
+if(busquedaURL){
 
-        <h3>${producto.nombre}</h3>
-
-        <div class="producto-footer">
-
-            <p>${producto.precio}</p>
-
-            <a href="
-            producto.html?id=${id}
-            "
-            class="btn-producto">
-
-            🛒
-
-            </a>
-
-        </div>
-
-    </div>
-
-    `;
+    inputBuscador.value =
+    busquedaURL;
 
 }
 
-</script>
+/* ===================================== */
+/* RENDER PRODUCTOS */
+/* ===================================== */
+
+function renderProductos(categoria = "Todos") {
+
+    grid.innerHTML = "";
+
+    const textoBusqueda =
+    inputBuscador.value.toLowerCase();
+
+            for (const id in productos) {
+
+                const producto =
+                    productos[id];
+
+                if (
+
+                    (
+
+                        categoria === "Todos"
+
+                        ||
+
+                        producto.categoria.includes(categoria)
+
+                    )
+
+                    &&
+
+                    (
+
+                        producto.nombre
+                            .toLowerCase()
+                            .includes(textoBusqueda)
+
+                        ||
+
+                        producto.categoria
+                            .join(" ")
+                            .toLowerCase()
+                            .includes(textoBusqueda)
+
+                    )
+
+                ) {
+
+                    grid.innerHTML += `
+
+            <div class="card-catalogo">
+
+                <img src="${producto.imagenPrincipal}">
+
+                <h3>${producto.nombre}</h3>
+
+                <div class="producto-footer">
+
+                    <p>${producto.precio}</p>
+
+                    <a href="
+                    producto.html?id=${id}
+                    "
+                    class="btn-producto">
+
+                    🛒
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            `;
+
+                }
+
+            }
+
+        }
+        /* ===================================== */
+        /* FILTROS */
+        /* ===================================== */
+
+        function filtrarCategoria(categoria) {
+
+            renderProductos(categoria);
+
+        }
+
+        /* ===================================== */
+        /* BUSCADOR */
+        /* ===================================== */
+
+        document
+            .getElementById("buscadorProductos")
+            .addEventListener("input", () => {
+
+                renderProductos();
+
+            });
+
+        /* CARGA INICIAL */
+
+        renderProductos();
+
+    </script>
 
 </body>
 
