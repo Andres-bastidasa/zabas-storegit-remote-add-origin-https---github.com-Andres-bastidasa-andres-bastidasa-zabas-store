@@ -1,4 +1,4 @@
-let cantidad = 1;
+window.cantidad = 1;
 
 const cantidadTexto =
 document.getElementById("cantidadProducto");
@@ -9,22 +9,40 @@ document.getElementById("masCantidad");
 const botonMenos =
 document.getElementById("menosCantidad");
 
-botonMas.addEventListener("click", () => {
+/* ===================================== */
+/* SOLO SI EXISTEN */
+/* ===================================== */
 
-    cantidad++;
+if(
+    botonMas &&
+    botonMenos &&
+    cantidadTexto
+){
 
-    cantidadTexto.textContent = cantidad;
+    botonMas.addEventListener(
+    "click",
+    () => {
 
-});
+        window.cantidad++;
 
-botonMenos.addEventListener("click", () => {
+        cantidadTexto.textContent =
+        window.cantidad;
 
-    if(cantidad > 1){
+    });
 
-        cantidad--;
+    botonMenos.addEventListener(
+    "click",
+    () => {
 
-        cantidadTexto.textContent = cantidad;
+        if(window.cantidad > 1){
 
-    }
+            window.cantidad--;
 
-});
+            cantidadTexto.textContent =
+            window.cantidad;
+
+        }
+
+    });
+
+}

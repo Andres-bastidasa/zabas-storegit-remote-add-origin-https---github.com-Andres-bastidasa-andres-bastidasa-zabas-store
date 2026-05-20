@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Checkout | ZABAS Tactical Gear
+    </title>
+
+    <link
+    rel="stylesheet"
+    href="css/style.css">
+
+    <link
+    rel="stylesheet"
+    href="css/checkout.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div id="navbar"></div>
+
+    <!-- CHECKOUT -->
+
+    <section class="checkout-container">
+
+        <!-- IZQUIERDA -->
+
+        <div class="checkout-formulario">
+
+            <h1>
+                Finalizar Pedido
+            </h1>
+
+            <p class="checkout-subtitulo">
+                Completa tus datos para continuar
+            </p>
+
+            <!-- FORM -->
+
+            <div class="grupo-input">
+
+                <label>
+                    Nombre completo
+                </label>
+
+                <input
+                type="text"
+                id="nombreCliente"
+                placeholder="Tu nombre">
+
+            </div>
+
+            <div class="grupo-input">
+
+                <label>
+                    Teléfono
+                </label>
+
+                <input
+                type="text"
+                id="telefonoCliente"
+                placeholder="3001234567">
+
+            </div>
+
+            <div class="grupo-input">
+
+                <label>
+                    Ciudad
+                </label>
+
+                <select id="ciudadCliente">
+
+                    <option value="">
+                        Selecciona ciudad
+                    </option>
+
+                    <option value="Bogotá">
+                        Bogotá
+                    </option>
+
+                    <option value="Nacional">
+                        Otra ciudad
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="grupo-input">
+
+                <label>
+                    Dirección
+                </label>
+
+                <input
+                type="text"
+                id="direccionCliente"
+                placeholder="Dirección completa">
+
+            </div>
+
+            <!-- METODOS -->
+
+            <div class="metodos-pago">
+
+                <h3>
+                    Método de pago
+                </h3>
+
+                <div class="metodo activo">
+
+                    💳 Tarjeta Crédito / Débito
+
+                </div>
+
+                <div class="metodo">
+
+                    🟣 Nequi
+
+                </div>
+
+                <div class="metodo">
+
+                    🔵 Daviplata
+
+                </div>
+
+                <div class="metodo">
+
+                    🏦 PSE
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DERECHA -->
+
+        <div class="checkout-resumen">
+
+            <h2>
+                Resumen Pedido
+            </h2>
+
+            <div
+            id="checkoutItems"
+            class="checkout-items">
+
+            </div>
+
+            <div class="checkout-totales">
+
+                <div class="fila-total">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotalCheckout">
+                        $0
+                    </strong>
+
+                </div>
+
+                <div class="fila-total">
+
+                    <span>
+                        Envío
+                    </span>
+
+                    <strong id="envioCheckout">
+                        $0
+                    </strong>
+
+                </div>
+
+                <div class="fila-total total-final">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalCheckout">
+                        $0
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <button
+            class="btn-finalizar-checkout"
+            id="btnWhatsapp">
+
+                FINALIZAR PEDIDO
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <div id="footer"></div>
+
+    <!-- SCRIPTS -->
+
+    <script src="./js/loader.js"></script>
+
+    <script src="./js/checkout.js"></script>
+
+</body>
+
+</html>

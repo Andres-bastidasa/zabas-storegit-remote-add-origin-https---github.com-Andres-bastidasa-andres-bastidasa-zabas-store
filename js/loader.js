@@ -14,6 +14,80 @@ async function cargarComponentes() {
     "navbar"
     ).innerHTML = navbarHTML;
 
+    /* ========================= */
+/* CARRITO LATERAL */
+/* ========================= */
+
+const carritoBtn =
+document.querySelector(
+".carrito-icono"
+);
+
+const carritoLateral =
+document.getElementById(
+"carritoLateral"
+);
+
+const overlayCarrito =
+document.getElementById(
+"overlayCarrito"
+);
+
+const cerrarCarrito =
+document.getElementById(
+"cerrarCarrito"
+);
+
+if(carritoBtn){
+
+    carritoBtn.addEventListener(
+    "click",
+    (e)=>{
+
+        e.preventDefault();
+
+        carritoLateral.classList.add(
+        "active"
+        );
+
+        overlayCarrito.classList.add(
+        "active"
+        );
+
+    });
+
+}
+
+function cerrarPanel(){
+
+    carritoLateral.classList.remove(
+    "active"
+    );
+
+    overlayCarrito.classList.remove(
+    "active"
+    );
+
+}
+
+if(cerrarCarrito){
+
+    cerrarCarrito.addEventListener(
+    "click",
+    cerrarPanel
+    );
+
+}
+
+if(overlayCarrito){
+
+    overlayCarrito.addEventListener(
+    "click",
+    cerrarPanel
+    );
+
+}
+
     // =========================
     // BUSCADOR NAVBAR
     // =========================
@@ -94,3 +168,18 @@ if(hamburguesa){
 }
 
 cargarComponentes();
+setTimeout(()=>{
+
+    if(typeof renderCarrito === "function"){
+
+        renderCarrito();
+
+    }
+
+    if(typeof actualizarContador === "function"){
+
+        actualizarContador();
+
+    }
+
+},200);
